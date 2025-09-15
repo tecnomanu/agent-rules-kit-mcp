@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+      "agent-rules-kit-local": {
+        "command": "/bin/zsh",
+        "args": [
+          "-lc",
+          "/Users/manu/.nvm/versions/node/v20.19.2/bin/node ./dist/index.js"
+        ]
+      }
+    }
+  }

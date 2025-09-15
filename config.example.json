@@ -1,0 +1,46 @@
+{
+	"server": {
+		"name": "agent-rules-kit-mcp",
+		"version": "1.0.0",
+		"port": 3001,
+		"log_level": "info"
+	},
+	"agent_rules_kit": {
+		"default_config_path": "/path/to/agent-rules-kit/config.json",
+		"default_port": 3000,
+		"default_mode": "dev",
+		"auto_detect_stack": true,
+		"auto_suggest_rules": true,
+		"preferred_architecture": "standard",
+		"preferred_ide": "cursor",
+		"default_mcp_tools": ["pampa", "github", "filesystem"]
+	},
+	"project_defaults": {
+		"laravel": {
+			"version": "11",
+			"architecture": "ddd",
+			"mcp_tools": ["pampa", "github", "filesystem"]
+		},
+		"nextjs": {
+			"version": "14",
+			"architecture": "app-router",
+			"mcp_tools": ["github", "filesystem", "fetch"]
+		},
+		"react": {
+			"version": "18",
+			"architecture": "hooks",
+			"mcp_tools": ["github", "filesystem", "memory"]
+		},
+		"angular": {
+			"version": "17",
+			"architecture": "standalone",
+			"mcp_tools": ["github", "filesystem", "fetch"]
+		}
+	},
+	"intelligent_suggestions": {
+		"enabled": true,
+		"suggest_missing_tools": true,
+		"warn_outdated_versions": true,
+		"recommend_architecture_upgrades": true
+	}
+}
