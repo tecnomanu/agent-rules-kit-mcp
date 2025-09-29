@@ -1,11 +1,7 @@
 ---
 projectPath: ./
 cursorPath: .
-stack: nodejs
-architecture: standard
-detectedVersion: 18
-versionRange: v18
-formattedVersionName: Node.js 18
+stack: node
 globs: ./**/*
 alwaysApply: false
 ---
