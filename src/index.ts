@@ -112,17 +112,20 @@ server.setRequestHandler(GetPromptRequestSchema, async (request) => {
  * Main function to start the server
  */
 async function main() {
-	const transport = new StdioServerTransport();
-	await server.connect(transport);
-
-	// Optional startup log for debugging
-	console.error('Agent Rules Kit MCP Server started');
-}
-
-// Execute the server if this file is the entry point
-if (import.meta.url === `file://${process.argv[1]}`) {
-	main().catch((error) => {
-		console.error('Error starting MCP server:', error);
+	try {
+		const transport = new StdioServerTransport();
+		await server.connect(transport);
+		
+		// Log to stderr for debugging (stdout is used for MCP communication)
+		console.error('Agent Rules Kit MCP Server started successfully');
+	} catch (error) {
+		console.error('Failed to start MCP server:', error);
 		process.exit(1);
-	});
+	}
 }
+
+// Always start the server when this module is executed directly
+main().catch((error) => {
+	console.error('Error starting MCP server:', error);
+	process.exit(1);
+});
